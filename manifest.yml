@@ -1,5 +1,5 @@
 name : nodejs
-version : 0.0.1
+version : 0.0.2
 description: Latest NodeJS version
 inherits : wercker/ubuntu12.04-nodejs0.8
 script : echo "noop"
