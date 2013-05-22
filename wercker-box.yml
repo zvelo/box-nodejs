@@ -2,4 +2,6 @@ name : nodejs
 version : 0.0.2
 description: Latest NodeJS version
 inherits : wercker/ubuntu12.04-nodejs0.8
+type : main
+os : ubuntu@12.04
 script : echo "noop"
