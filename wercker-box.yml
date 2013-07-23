@@ -1,5 +1,5 @@
 name : nodejs
-version : 0.0.9
+version : 0.0.10
 description: Latest NodeJS version
 inherits : wercker/ubuntu12.04-nodejs0.8@0.0.6
 type : main
@@ -8,11 +8,11 @@ keywords:
   - nodejs
 box-detect:
   priority : 1000
-  version : 
+  version :
   detect:
     - files:
       - package.json
-      
+
 default-build:
   nodejs:
     priority : 50
@@ -27,7 +27,7 @@ default-build:
           - npm-install
           # A step that executes `npm test` command
           - npm-test
-          
+
           # A custom script step, name value is used in the UI
           # and the code value contains the command that get executed
           - script:
@@ -35,4 +35,4 @@ default-build:
               code: |
                 echo "node version $(node -v) running"
                 echo "npm version $(npm -v) running"
-          
+
