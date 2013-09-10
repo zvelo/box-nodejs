@@ -4,8 +4,7 @@ Latest NodeJS version
 
 # What's new
 
-- Add license
-- Update readme
+- Inherit from ubuntu12.04-nodejs0.8 version 0.0.7
 
 # License
 
@@ -31,6 +30,10 @@ IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 # Changelog
+
+## 0.0.11
+
+- Inherit from ubuntu12.04-nodejs0.8 version 0.0.7
 
 ## 0.0.10
 
