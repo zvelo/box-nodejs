@@ -1,5 +1,5 @@
 name : nodejs
-version : 0.0.10
+version : 0.0.11
 description: Latest NodeJS version
 inherits : wercker/ubuntu12.04-nodejs0.8@0.0.7
 type : main
