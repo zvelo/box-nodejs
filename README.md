@@ -4,7 +4,7 @@ Latest NodeJS version
 
 # What's new
 
-- Inherit from ubuntu12.04-nodejs0.10 version 1.0.0
+- Inherit `wercker/ubuntu12.04-nodejs0.10` version 1.0.0
 
 # License
 
@@ -14,7 +14,7 @@ The MIT License (MIT)
 
 ## 1.0.0
 
-- Inherit from ubuntu12.04-nodejs0.10 version 1.0.0
+- Inherit `wercker/ubuntu12.04-nodejs0.10` version 1.0.0
 
 ## 0.0.12
 
