@@ -4,7 +4,7 @@ inherits: wercker/ubuntu12.04-webessentials@1.0.4
 type: main
 platform: ubuntu@12.04
 packages:
-  - nodejs@0.10.26
+  - nodejs@0.10.28
 keywords:
   - nodejs
 box-detect:
@@ -28,6 +28,7 @@ script: |
   sudo make install
   cd $HOME
   rm -fr nodeinstall
+  sudo npm install -g bower grunt-cli
   node -v
 default-build:
   nodejs:
