@@ -1,21 +1,37 @@
-name : nodejs
-version : 1.0.2
-description: Latest NodeJS version
-inherits : wercker/ubuntu12.04-nodejs0.10@1.0.6
-type : main
-platform : ubuntu@12.04
+name: nodejs
+version: 1.0.0
+inherits: wercker/ubuntu12.04-webessentials@1.0.4
+type: main
+platform: ubuntu@12.04
+packages:
+  - nodejs@0.10.26
 keywords:
   - nodejs
 box-detect:
-  priority : 1000
-  version :
+  priority: 1000
+  version:
   detect:
     - files:
       - package.json
-
+script: |
+  export NODEVERSION=0.10.28
+  sudo apt-get update
+  sudo apt-get install wget build-essential
+  cd $HOME
+  mkdir nodeinstall
+  cd nodeinstall
+  wget http://nodejs.org/dist/v$NODEVERSION/node-v$NODEVERSION.tar.gz
+  tar xzf node-v$NODEVERSION.tar.gz
+  cd node-v$NODEVERSION
+  ./configure
+  make
+  sudo make install
+  cd $HOME
+  rm -fr nodeinstall
+  node -v
 default-build:
   nodejs:
-    priority : 50
+    priority: 50
     detect:
       - default: true
     text-to-append: |
@@ -35,4 +51,3 @@ default-build:
               code: |
                 echo "node version $(node -v) running"
                 echo "npm version $(npm -v) running"
-
